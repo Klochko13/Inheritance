@@ -59,6 +59,14 @@ public class Student extends Human
     public Student(String lastName, String firstName, int age) {
         super(lastName, firstName, age);
     }
+    public Student (Student other){
+        super(other);
+        this.speciality = other.speciality;
+        this.group = other.group;
+        this.rating = other.rating;
+        this.attendance = other.attendance;
+        System.out.println("SCopyConstructor" + Integer.toHexString(hashCode()));
+        }
 
     @Override
     public String toString() {

@@ -30,6 +30,12 @@ public class Human {
         setAge(age);
         System.out.println("Constructor" +  Integer.toHexString(hashCode()));
     }
+    public Human (Human other){
+        this.lastName = other.lastName;
+        this.firstName = other.firstName;
+        this.age = other.age;
+        System.out.println("CopyConstructor" + Integer.toHexString(hashCode()));
+    }
     public String toString (){
         return lastName + " " + firstName + " " + age;
     }
